@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
+var userApi = require('./users/index.js');
 
+console.log(userApi);
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/api/addUser',userApi);
 
 module.exports = router;
+
